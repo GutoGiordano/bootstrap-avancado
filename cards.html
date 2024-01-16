@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap - Cards</title>
+    <link rel="stylesheet" href="./lib/bootstrap.min.css"> <!-- Link do arquivo do bootstrap css -->
+    <link rel="stylesheet" href="./lib/main.css"> <!-- Link do arquivo do css Bootstrap -->
+</head>
+<body>
+    <h1>Bootstrap - Cards</h1>
+    <div class="container"> <!-- configurando o tamanho da página através do container no bootstrap -->
+        <div class="row"> <!-- configurando as linhas -->
+            <div class="col-4"> <!-- configurando para 4 colunas (máx 12) -->
+                <article class="card"> <!-- adicionando um card // era div como os exemplos abaixo, ams para ficar melhor identificado, podemos trabalhar com essa nomeclatura de header etc etc-->
+                    <header class="card-header"> <!-- adicionando um cabeçalho ao card -->
+                        Economia
+                    </header>
+                    <img src="https://via.placeholder.com/100x100" alt="Imagem fictícia">
+                    <div class="card-body"> <!-- adicionando um corpo ao card -->
+                        <h4 class="card-title">Bolsa dispara</h4>
+                        <h5 class="card-subtitle">Mercado reage bem e sobe 3 pontos</h5>
+                        <p class="card-text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur iusto consequatur possimus minima obcaecati? Repudiandae animi dolores dolorem. Explicabo quibusdam saepe asperiores, ut aliquam voluptatibus! Corrupti voluptatum ullam facilis reprehenderit.
+                        </p>
+                        <a href="#" class="btn btn-primary">Leia mais</a>
+                    </div>
+                    <footer class="card-footer"> <!-- adicionando um Rodapé card -->
+                        Postado em: <time>07/01/2024</time>
+                    </footer>
+                </article>
+            </div>
+            <div class="col-4"> <!-- Atentar para o local, se não fica um card abaixo do outro -->
+                <div class="card text-bg-secondary"> <!-- text-bg-mode altera a cor dos cards -->
+                    <div class="card-header">
+                        Cabeçalho do Header
+                    </div>
+                    <img src="https://via.placeholder.com/100x100" alt="Imagem fictícia">
+                    <div class="card-body">
+                        <h4 class="card-title">Título do Card</h4>
+                        <h5 class="card-subtitle">Subtítulo do card</h5>
+                        <p class="card-text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur iusto consequatur possimus minima obcaecati? Repudiandae animi dolores dolorem. Explicabo quibusdam saepe asperiores, ut aliquam voluptatibus! Corrupti voluptatum ullam facilis reprehenderit.
+                        </p>
+                        <a href="#" class="btn btn-primary">Botão link</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-4"> <!-- Se colocar mais uma repetição dessa div, ela vai para baixo, pois definimos as colunas com 4 e se for fazer isso tem que definir para 3 -->
+                <div class="card text-bg-dark"> <!-- mudando o BG do card para uma imagem. Adicionei a class text-bg para dar leitura no texto -->
+                    <!-- <div class="card-header"> escondi o cabeçalho por conta de alinhamento e poderia ter sido deletado.
+                        Cabeçalho do Header
+                    </div> -->
+                    <img src="./lib/img/img-exp.jpg" alt="Torcida do Cruzeiro">
+                    <div class="card-img-overlay"> <!-- para melhorar a leitura, adicionei uma lente no css -->
+                        <h4 class="card-title">Título do Card</h4>
+                        <h5 class="card-subtitle">Subtítulo do card</h5>
+                        <p class="card-text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur iusto consequatur possimus minima obcaecati? Repudiandae animi dolores dolorem. Explicabo quibusdam saepe asperiores, ut aliquam voluptatibus! Corrupti voluptatum ullam facilis reprehenderit.
+                        </p>
+                        <a href="#" class="btn btn-primary">Botão link</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <script src="./lib/bootstrap.bundle.min.js"></script> <!-- Link do arquivo do JS Bootstrap -->
+</body>
+</html>

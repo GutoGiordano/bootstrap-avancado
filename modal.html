@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal</title>
+    <link rel="stylesheet" href="lib/bootstrap.min.css"> <!-- Link do arquivo do css Bootstrap -->
+</head>
+<body>
+    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exemplo-modal"> <!-- Os atributos data-bs-toggle="modal" ativa o botão e data-bs-target="#nome-que-eu-der" define onde ele vai ser lido (id) -->
+        Abrir modal
+    </button>
+    <div class="modal" id="exemplo-modal" data-bs-backdrop="static"> <!-- Criando o modal (popup) | id que foi definido para ser lido pelo botão | data-bs-backdrop="static" tira a função de clicar fora do modal e fechar ele-->
+        <div class="modal-dialog"> <!-- Criando o modal (popup) -->
+            <div class="modal-content"> <!-- conteúdo do modal (popup) -->
+                <div class="modal-header"> <!-- cabeçalho do modal (popup) -->
+                    <h3>Título da modal</h3>
+                    <button data-bs-dismiss="modal" type="button" class="btn-close"></button> <!-- Botão para fechar o modal (popup) por conta do travamento que colocamos data-bs-backdrop | data-bs-dismiss="modal" faz o botão funcionar -->
+                </div>
+                <div class="modal-body"> <!-- Corpo do modal (popup) -->
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam dicta quae sapiente cupiditate aperiam neque recusandae facilis, dolores optio deserunt nam atque alias veritatis quo excepturi dolor consequatur culpa cum?</p>
+                </div>
+                <div class="modal-footer"> <!-- Rodapé do modal (popup) -->
+                    <p>Tudo certo?</p>
+                    <button type="button" class="btn btn-warning" data-bs-dismiss="modal">Cancelar</button>
+                    <button type="button" class="btn btn-success" data-bs-dismiss="modal">Confirmar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="lib/bootstrap.bundle.min.js"></script> <!-- Link do arquivo do JS Bootstrap -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {//Adicionando uma função que vai abrir o modal automático e nesse caso, quando a página for carregada//
+            const modalExemplo = new bootstrap.Modal('#exemplo-modal');
+            setTimeout(function() { //coloca um tempo de delay para abrir o modal
+                modalExemplo.show();
+            }, 3000) //define o tem po em milisegundos
+        }) 
+    </script>
+</body>
+</html>

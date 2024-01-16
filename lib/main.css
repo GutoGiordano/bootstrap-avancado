@@ -1,0 +1,31 @@
+.card-img-overlay { /*adicionando um filtro para melhora a legibilidade do texto*/
+    background-color: rgba(0, 0, 0, 60%);
+}
+
+.nav-link {
+    text-align: right;
+}
+
+.navbar-nav .nav-link.active {
+    color: #fff;
+    font-weight: bold;
+}
+
+section {
+    height: 100vh; /*sections vão ocupar 100% do viewport*/
+    padding-top: 80px; /*evita que o cabeçalho esconda o título da section*/
+}
+
+header {  /*faz o cabeçalho acompanhar a rolagem da página*/
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+}
+
+
+@media (max-width: 768px) { /* criei uma regra para ajustar a margem do menu nos celulares */
+    .nav-text {
+        margin-right: 1rem; 
+    }
+}

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navbar</title>
+    <link rel="stylesheet" href="lib/bootstrap.min.css"> <!-- Link do arquivo do css Bootstrap -->
+    <link rel="stylesheet" href="./lib/main.css"> <!-- Link do arquivo do css -->
+</head>
+<body>
+    <header id="cabecalho">
+        <div class="navbar navbar-expand-lg"> <!-- Criando o NavBar | navbar-expand-lg estou dizendo que é para o nav bar expandir em monitores (responsividade)-->
+            <div class="container"> <!-- melhora o ajuste do site e centraliza, tirando ele de ficar ponta a ponta no navegador -->
+                <h1>Título do site</h1>
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu"> <!-- Criando um botão responsivo para o NavBar -->
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <nav id="menu" class="collapse navbar-collapse justify-content-end"> <!-- collapse navbar-collapse adiciona os itens do navbar dentro do menu hamburger | justify-content-end coloca o título de um lado e o menu do outro -->
+                    <ul class="nav navbar-nav nav-pills"> <!-- estiliza o navbar |navbar-nav deixa um link abaixo do outro | adiciona espaço entre os links junto com a classe nav-item abaixo (li) e nav-link (a) -->
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#inicio"><span class="nav-text">Início</span></a>  <!-- active é a função que vai dizer para o user, qual página está selecionada combinada com a função data-bs-spy="scroll"-->
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#produtos"><span class="nav-text">Produtos</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#promocoes"><span class="nav-text">Promoções</span></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contato"><span class="nav-text">Contato</span></a>
+                        </li>
+                    </ul>
+                </nav>
+                <button id="btn-checar-emails" class="btn btn- btn-warning" type="button">Caixa de entrada</button>
+            </div>
+        </div>
+    </header>
+    <div class="container" data-bs-spy="scroll" data-bs-target="#cabecalho"> <!-- faz que o Bootstrap "espie" o scroll e faça a função active funcionar corretamente -->
+        <section id="inicio">
+            <h2>Início</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A aperiam neque omnis? Omnis eligendi repellendus amet, quidem impedit suscipit praesentium quia voluptates tempora ratione nobis dolore, fugit harum odit sunt.</p>
+        </section>
+        <section id="produtos">
+            <h2>Produtos</h2>
+            <div class="container"> <!-- Adicionando abas -->
+                <nav class="nav nav-tabs"> <!-- Se trocar o nav-tab pot nav-pills vão ser botões ao inves de "aparência de abas" -->
+                    <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#infantil">Moda Infantil</button>
+                    <button class="nav-link" data-bs-toggle="tab" data-bs-target="#masculina">Moda Masculina</button>
+                    <button class="nav-link" data-bs-toggle="tab" data-bs-target="#feminina">Moda Feminina</button>
+                </nav>
+                <div class="tab-content">
+                    <div class="tab-pane active show" id="infantil"> <!-- tab-pane define o conteúdo de cada aba -->
+                        Conteúdo da aba infantil
+                    </div>                
+                    <div class="tab-pane" id="masculina">
+                        Conteúdo da aba masculina
+                    </div>
+                    <div class="tab-pane" id="feminina">
+                        Conteúdo da aba feminina
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="promocoes">
+            <h2>Promoções</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A aperiam neque omnis? Omnis eligendi repellendus amet, quidem impedit suscipit praesentium quia voluptates tempora ratione nobis dolore, fugit harum odit sunt.</p>
+        </section>
+        <section id="contato">
+            <h2>Contato</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A aperiam neque omnis? Omnis eligendi repellendus amet, quidem impedit suscipit praesentium quia voluptates tempora ratione nobis dolore, fugit harum odit sunt.</p>
+        </section>
+    </div>
+
+    <div class="toast-container position-fixed bottom-0 end-0 p-3"> <!-- Criando um toast | Fixa a posição da mensagem de toast inserindo as posições | P insere espaçamento -->
+        <div class="toast" id="mensagens-alerta">
+            <header class="toast-header">
+                <strong>Importante</strong> <!-- Classe de texto tipo h1, h2 etc-->
+            </header>
+            <body class="toast-body">
+                Você possue 10 mensagens não lidas!
+                <div class="mt-2 pt-2 border-top"> <!-- adicionando um botão de fechar o toast | mt (margin top) pt (padding top) | border top adiciona uma borda-->
+                    <button data-bs-dismiss="toast" class="btn btn-danger" type="button">
+                        Fechar mensagem
+                    </button>
+                </div>
+            </body>
+        </div>
+    </div>
+    
+    <script src="lib/bootstrap.bundle.min.js"></script> <!-- Link do arquivo do JS Bootstrap -->
+    <script src="lib/main.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carousel</title>
+    <link rel="stylesheet" href="lib/bootstrap.min.css"> <!-- Link do arquivo do css Bootstrap -->
+</head>
+<body>
+    <div class="container"> <!-- qdo coloco no container eu limito a exibição em tela cheia, o cateúdo fora do container, pega a tela toda -->
+        <div id="carousel-exemplo" class="carousel carousel-fade slide" data-bs-ride="carousel"> <!-- carousel | data-bs-ride = carousel identifica para o BS que é um carousel | a id, serve para fazer os botões de controle do slide funcionar -->
+            <div class="carousel-inner"> <!-- o container do carousel -->
+                <div data-bs-interval="3000" class="carousel-item active"> <!-- aqui vão as do carousel | active faz a ativação do carousel, geralmente indica o primeiro item dele | data-bs-interval="tempo em milisegundos - configuração do tempo que vai mudar o slide"-->
+                    <img class="d-block w-100" src="https://cdn.pixabay.com/photo/2023/11/02/16/49/cat-8361048_1280.jpg" alt="Gato na árvore"> <!--  class="d-block w-100" faz ocupar 100% da página-->
+                    <div class="carousel-caption"> <!-- Inserindo texto nas imagens -->
+                        <h2>Foto 1</h2>
+                    </div>
+                </div>
+                <div data-bs-interval="3000" class="carousel-item"> <!-- aqui vão as do carousel -->
+                    <img class="d-block w-100" src="https://cdn.pixabay.com/photo/2024/01/03/19/37/photography-8486085_1280.jpg" alt="Camera fotográfica antiga">
+                    <div class="carousel-caption">
+                        <h2>Foto 2</h2>
+                    </div>
+                </div>
+                <div data-bs-interval="3000" class="carousel-item"> <!-- aqui vão as do carousel -->
+                    <img class="d-block w-100" src="https://cdn.pixabay.com/photo/2023/12/12/21/20/dog-8445917_1280.jpg" alt="Cachorro na praia">
+                    <div class="carousel-caption">
+                        <h2>Foto 3</h2>
+                    </div>
+                </div>
+            </div>
+            <button data-bs-target="#carousel-exemplo" data-bs-slide="prev" class="carousel-control-prev" type="button"> <!-- adicionando botões para controlar o carousel | prev (<) | data-bs-target=#id fala para onde o botão vai voltar | data-bs-slide="prev" comprtamento (voltar)-->
+                <span class="carousel-control-prev-icon"></span> <!-- o estilo do botão prev-icon (<) -->
+            </button>
+            <button data-bs-target="#carousel-exemplo" data-bs-slide="next" class="carousel-control-next" type="button">
+                <span class="carousel-control-next-icon"></span> <!-- o estilo do botão next-icon (>) -->
+            </button>
+            <div class="carousel-indicators"> <!-- adicionando a quantidade de slides no carousel -->
+                <button type="button" data-bs-target="#carousel-exemplo" class="active" data-bs-slide-to="0"></button> <!-- data-bs-slide-to="posicão" diz para onde o botão vai direcionar, lembrando que o primeiro sempre é zero -->
+                <button type="button" data-bs-target="#carousel-exemplo" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#carousel-exemplo" data-bs-slide-to="2"></button>
+            </div>
+        </div>
+    </div>
+    
+
+    <script src="lib/bootstrap.bundle.min.js"></script> <!-- Link do arquivo do JS Bootstrap -->
+</body>
+</html>

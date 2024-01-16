@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown</title>
+    <link rel="stylesheet" href="lib/bootstrap.min.css"> <!-- Link do arquivo do css Bootstrap -->
+</head>
+<body>
+<div class="container d-flex"> <!-- d-flex faz eles ficarem um ao lado do outro -->
+    <div class="dropdown me-3"> <!-- Criação do Dropdown | me-x coloca uma margem esquerda-->
+        <button data-bs-toggle="dropdown" class="btn btn-primary dropdown-toggle"> <!-- dropdown-toggle adiciona a setinha indicativa | data-bs-toggle é que faz a ativação da função -->
+            cadastrar
+        </button>
+        <ul class="dropdown-menu dropdown-menu-dark"> <!-- criação dropdown-menu | dropdown-menu-variação troca os estilos-->
+            <li class="dropdown-item"> <!-- aplicando o estilo do BS nos itens -->
+                <a href="#">Novo Usário</a>
+            </li>
+            <li class="dropdown-item">
+                <a href="#">Novo Fornecedor</a>
+            </li>
+            <li class="dropdown-item">
+                <a href="#">Novo Funcionário</a>
+            </li>
+        </ul>
+    </div>
+    <!-- Uma outra opção de criar esse menu, separando o texto da setinha-->
+    <div class="dropdown me-3"> <!-- Criação do Dropdown -->
+        <button class="btn btn-warning"> <!--data-bs-toggle é que faz a ativação da função -->
+            cadastrar
+        </button>
+        <button class="btn btn-warning dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown"></button>
+        <ul class="dropdown-menu dropdown-menu-dark"> <!-- criação dropdown-menu | dropdown-menu-variação troca os estilos-->
+            <li class="dropdown-item"> <!-- aplicando o estilo do BS nos itens -->
+                <a href="#">Novo Usário</a>
+            </li>
+            <li class="dropdown-item">
+                <a href="#">Novo Fornecedor</a>
+            </li>
+            <li class="dropdown-item">
+                <a href="#">Novo Funcionário</a>
+            </li>
+        </ul>
+    </div>
+    <!-- Uma outra opção de criar esse menu, separando o texto da setinha só que mais juntos-->
+    <div class="btn-group"> <!-- btn-group une os dois botões, o texto e a setinha e cada um pode ter sua função -->
+        <button class="btn btn-success"> <!--data-bs-toggle é que faz a ativação da função -->
+            cadastrar
+        </button>
+        <button class="btn btn-dark dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown"></button>
+        <ul class="dropdown-menu dropdown-menu-dark"> <!-- criação dropdown-menu | dropdown-menu-variação troca os estilos-->
+            <li class="dropdown-item"> <!-- aplicando o estilo do BS nos itens -->
+                <a href="#">Novo Usário</a>
+            </li>
+            <li class="dropdown-item">
+                <a href="#">Novo Fornecedor</a>
+            </li>
+            <li class="dropdown-item">
+                <a href="#">Novo Funcionário</a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+    <script src="lib/bootstrap.bundle.min.js"></script> <!-- Link do arquivo do JS Bootstrap -->
+</body>
+</html>
